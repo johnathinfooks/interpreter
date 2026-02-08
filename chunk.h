@@ -20,6 +20,6 @@ void initChunk(Chunk* chunk);
 void writeChunk(Chunk* chunk, uint8_t byte);
 void freeChunk(Chunk* chunk);
 
-int addConstant(Chunk* chunk, Value value);
+int addConstantPool(Chunk* chunk, Value value);
 
 #endif // PIPE_CHUNK_H

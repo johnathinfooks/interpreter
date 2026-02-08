@@ -30,4 +30,4 @@ print|OUT {IO}
 
 USE
 
-print(magnitude(3, 4)
+print(magnitude(3, 4))
