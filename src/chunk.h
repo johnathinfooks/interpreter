@@ -18,6 +18,13 @@ typedef struct {
 } Chunk;
 
 void initChunk(Chunk* chunk);
+
+/**
+ * @breif Writes chunk logic. Considers line number.
+ * @param chunk Chunk to be written.
+ * @param byte The OpCode byte; bytecode.
+ * @param lineNum The line number that the chunk logic lies on.
+*/
 void writeChunk(Chunk* chunk, uint8_t byte, int lineNum);
 void freeChunk(Chunk* chunk);
 

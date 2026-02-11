@@ -12,7 +12,7 @@ build_path = "./build/"
 ############################################################
 
 def getCFiles() -> list[str]:
-    return [str(p) for p in Path(src_path).glob("*.c")]
+    return [str(p) for p in Path(src_path).glob("*.cpp")]
 
 def compile():
     build_dir = Path(build_path)
@@ -26,3 +26,5 @@ def compile():
     subprocess.run(["gcc", *getCFiles(), "-o", out], check=True)
 
 compile()
+
+# TODO: change the rm build thing to a subprocess command rather than the weird module that is here

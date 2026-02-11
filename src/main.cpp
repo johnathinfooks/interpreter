@@ -12,11 +12,14 @@ int main(int argc, const char* argv[])
     initVM();
 
 
-
+    int lineNum = 25;
     int x = addConstantPool(&chunk, 23);
-    writeChunk(&chunk, OP_CONSTANT, 25);
-    writeChunk(&chunk, x, 25);
-    writeChunk(&chunk, OP_RETURN, 25);
+    int y = addConstantPool(&chunk, 32.2);
+    writeChunk(&chunk, OP_CONSTANT, lineNum);
+    writeChunk(&chunk, x, lineNum);
+    writeChunk(&chunk, OP_CONSTANT, lineNum);
+    writeChunk(&chunk, y, lineNum);
+    writeChunk(&chunk, OP_RETURN, lineNum);
 
     interpret(&chunk);
     disassembleChunk(&chunk, "testcase");
